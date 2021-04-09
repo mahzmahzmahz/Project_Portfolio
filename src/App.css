@@ -1,38 +1,62 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-image: radial-gradient(
+    circle at top left, 
+    #438c75, 
+    #021f15 50%
+    );
+    
+  /* text-align: center; */
 }
 
 .App-header {
-  background-image: linear-gradient(red, yellow, blue);
+  background-image: radial-gradient(
+    circle at top left, 
+    #438c75, 
+    #021f15 50%
+    );
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  /*flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+img.NavBar-Alex{
+  max-width: 30%;
+}
+/* 
+ #NavBar{
+  display: inline;
+  overflow: hidden
+} */
+
+div.link-div{
+  float: right;
+  padding-right: 15%;
+  padding-top: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.link-div a.navLink{
+  padding: 10%;
+  color: #5cc9cd
+
 }
+
+nav#NavBar.navbar{
+  display: inline;
+}
+
+div.col{
+  min-height: 100vh;
+  align-content: center;
+  padding-top: 40%;
+}
+
+div#alexpic{
+  padding-top: 20%;
+}
+
+div#alexinfo{}
