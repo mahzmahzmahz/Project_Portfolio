@@ -143,19 +143,19 @@ const ThisImage = styled.img`
 `
 
 const ReadIt = styled.a`
+    display: flex;
     position: absolute;
+    text-decoration: none;
     top: 0;
     right: 0;
-    display: flex;
-    width: 50px;
-    height: 40px;
-    text-decoration: none;
+    
+    width: 40px;
+    height: 35px;
+    border-radius: 0 0 0 40px;
+    
     background: black;
-    border-radius: 0 0 0 80px;
     padding-left: 4px;
-    border-left: 1px solid white;
-    border-bottom: 1px solid white;
-    transition: all 0.3s;
+    transition: all .4s;
     cursor: pointer;
     overflow: hidden;
 

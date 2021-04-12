@@ -85,6 +85,14 @@ const Card = styled.article`
     max-width: 500px;
     padding: 0.5rem;
     overflow: hidden;
+    border: #3cdae8 solid 4px;
+    box-shadow: 5px 5px 12px 2px #f53c27;
+
+    :hover{
+        box-shadow: 5px 5px 12px 2px #3cdae8;
+        transition: opacity 0.1s ease-in-out
+    }
+
 `
 
 const Description = styled.div`
@@ -127,7 +135,7 @@ const Title = styled.h2`
 `
 
 const Languages = styled.h5`
-    font-size: 1rem;
+    font-size: .9rem;
     display: flex;
 
     align-items: center;
