@@ -9,7 +9,7 @@ function NavBar(){
             <Navbar.Brand style={{display: "inline"}}> <Link to="/home" ><img className="NavBar-Alex" alt="Alex Marz's Page" src={AlexLogo}/></Link></Navbar.Brand>
                 <div className="link-div">
                     <Link className="navLink" style={{ textDecoration: 'none'}} to="/portfolio"><strong>Portfolio</strong></Link>
-                    <Link className="navLink" style={{ textDecoration: 'none'}} to="/portfolio"><strong>Blogs</strong></Link>
+                    <Link className="navLink" style={{ textDecoration: 'none'}} to="/blogs"><strong>Blogs</strong></Link>
                 </div>
         </Navbar>
     )
