@@ -3,8 +3,9 @@ import styled from "styled-components"
 import { keyframes } from 'styled-components'
 import pic from "./Headshot.jpeg"
 import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import LinkedInIcon from "./Link2.png";
 import MediumIcon from "./Medium.jpg"
+import IMDBIcon from "./IMDB2.png"
 
 
 function About(){
@@ -29,14 +30,17 @@ function About(){
             </TextContainer>
             <Contacts className="flex-item">
                 <MyContacts background="black" href="https://github.com/mahzmahzmahz" target="_blank">
-                    <GitHubIcon style={{color: "red", fontSize: "3.5rem"}}/>
+                    <GitHubIcon style={{color: "red", fontSize: "3rem"}}/>
                 </MyContacts>
-                <MyContactsTwo background="#0E65C2" href="https://www.linkedin.com/in/alex-marz/" target="_blank">
-                    <LinkedInIcon style={{fontSize: "4.5rem"}}/>
+                <MyContactsTwo background="white" href="https://www.linkedin.com/in/alex-marz/" target="_blank">
+                    <img src={LinkedInIcon} className= "rounded-circle" style={{background: "#007bff", fontSize: "3rem"}}/>
                 </MyContactsTwo>
-                <MyContacts background="black" href="https://github.com/mahzmahzmahz" target="_blank">
-                    <img src={MediumIcon} style={{fontSize: "7rem"}}/>
+                <MyContacts background="black" href="https://alexhmarz.medium.com/" target="_blank">
+                    <img className= "rounded-circle" src={MediumIcon} style={{fontSize: "7rem"}}/>
                 </MyContacts>
+                <MyContactsTwo background="black" href="https://www.imdb.com/name/nm9542537/?ref_=fn_al_nm_1" target="_blank">
+                    <img className= "rounded-circle" src={IMDBIcon} style={{fontSize: "3rem"}}/>
+                </MyContactsTwo>
 
             </Contacts>
 
@@ -139,7 +143,6 @@ const Contacts = styled.div`
 
 const MyContacts = styled.a`
   display: flex;
-  background: ${({background}) => background }
   border-radius: 50%;
   width: 65px;
   height: 65px;
@@ -158,11 +161,9 @@ const MyContacts = styled.a`
   }
 
 `
-
 const MyContactsTwo = styled.a`
   display: flex;
   border-radius: 50%;
-  background: ${({background}) => background }
   width: 65px;
   height: 65px;
   justify-content: center;
@@ -171,7 +172,7 @@ const MyContactsTwo = styled.a`
   
 
   img {
-      width 100%;
+      width 80%;
   }
 
   :hover{

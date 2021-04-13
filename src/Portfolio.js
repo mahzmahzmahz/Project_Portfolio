@@ -85,8 +85,8 @@ const Card = styled.article`
     max-width: 500px;
     padding: 0.5rem;
     overflow: hidden;
-    border: #3cdae8 solid 4px;
-    box-shadow: 5px 5px 12px 2px #f53c27;
+    border: black solid 4px;
+    box-shadow: 5px 5px 12px 2px black;
 
     :hover{
         box-shadow: 5px 5px 12px 2px #3cdae8;

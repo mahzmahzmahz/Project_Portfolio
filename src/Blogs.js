@@ -117,10 +117,14 @@ const Card = styled.article`
     overflow: hidden;
     height: 250px;
     border: black solid 5px;
-     img {
-         max-height: 200px;
-         
-     }
+    box-shadow: 5px 5px 12px 2px black;
+    :hover{
+        box-shadow: 5px 5px 12px 2px #3cdae8;
+        transition: opacity 0.1s ease-in-out
+    }
+    img {
+        max-height: 200px;
+    }
 `
 
 
