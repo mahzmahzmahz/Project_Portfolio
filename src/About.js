@@ -43,7 +43,14 @@ function About(){
                 </MyContactsTwo>
 
             </Contacts>
-
+        <TextContainer>
+          <Bio>
+            This project was built with React and Styled Components
+          </Bio>
+          <RepoLink href="https://github.com/mahzmahzmahz/Project_Portfolio" target="_blank">
+            Check it Out!
+          </RepoLink>
+        </TextContainer>
             
         </Container>
         
@@ -143,6 +150,7 @@ const Contacts = styled.div`
 
 const MyContacts = styled.a`
   display: flex;
+  position: relative;
   border-radius: 50%;
   width: 65px;
   height: 65px;
@@ -163,6 +171,7 @@ const MyContacts = styled.a`
 `
 const MyContactsTwo = styled.a`
   display: flex;
+  position: relative;
   border-radius: 50%;
   width: 65px;
   height: 65px;
@@ -180,4 +189,13 @@ const MyContactsTwo = styled.a`
        animation: ${rotateTwo} 10s linear infinite;
   }
 
+`
+
+const RepoLink = styled.a`
+  font-size: 1rem;
+  display: flex;
+  color: white;
+
+  align-items: center;
+  justify-content: center;
 `

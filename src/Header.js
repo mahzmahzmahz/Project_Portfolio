@@ -27,7 +27,7 @@ function Header(){
 export default Header;
 
 const Head = styled.div`
-padding: 10%;
+padding-top: 3%;
 padding-bottom: 4%;
 `
 

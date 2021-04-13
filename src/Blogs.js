@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import MediumIcon from "./Medium.jpg"
 import Twilio from "./Twilio.png"
+import LinkedInIcon from "./Link2.png";
 
 
 function Blogs(){
@@ -14,6 +15,9 @@ function Blogs(){
             <PageTitle>
                 Blog Posts
             </PageTitle>
+            <BlogWriting>
+                A few samples of my tech writing. Enjoy!
+            </BlogWriting>
         </Head>
         <Container>
             <Card className="flex-item">
@@ -77,6 +81,22 @@ function Blogs(){
             </Card>
 
         </Container>
+        <Container2>
+        <ContactCard>
+            <ContactScript>
+                Feel free to get in touch!
+            </ContactScript>
+            <Email href="mailto: alexhmarz@gmail.com">AlexHMarz@gmail.com</Email>
+            <Contacts>
+                    <MyContacts background="black" href="https://alexhmarz.medium.com/" target="_blank">
+                        <img className= "rounded-circle" src={MediumIcon} style={{fontSize: "7rem"}}/>
+                    </MyContacts>
+                    <MyContacts background="white" href="https://www.linkedin.com/in/alex-marz/" target="_blank">
+                        <img src={LinkedInIcon} className= "rounded-circle" style={{background: "#007bff", fontSize: "3rem"}}/>
+                    </MyContacts>
+            </Contacts>
+        </ContactCard>
+        </Container2>
        </>
     )
 
@@ -85,8 +105,9 @@ function Blogs(){
 export default Blogs;
 
 const Head = styled.div`
-padding: 10%;
-padding-bottom: 4%;
+padding-top: 4%;
+padding-bottom: 2%;
+justify-content: center;
 `
 const PageTitle = styled.h3`
 font-size: 1em;
@@ -108,6 +129,18 @@ const Container = styled.section`
     }
 `
 
+const Container2 = styled.section`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    .flex-item{
+        margin 1rem;
+    }
+`
+
+
 const Card = styled.article`
     position: relative;
     background: grey;
@@ -127,7 +160,22 @@ const Card = styled.article`
     }
 `
 
+const ContactCard = styled.article`
+    position: relative;
+    background: grey;
+    width: 100%;
+    max-width: 500px;
+    padding: 0.5rem;
+    overflow: hidden;
+    border: black solid 4px;
+    box-shadow: 5px 5px 12px 2px black;
 
+    :hover{
+        box-shadow: 5px 5px 12px 2px #3cdae8;
+        transition: opacity 0.1s ease-in-out
+    }
+
+    `
 
 const Title = styled.h2`
     display: flex;
@@ -173,4 +221,59 @@ const SubTitle = styled.p`
     display: flex;
     align-items: center;
     justify-content: center;
+`
+
+const Email = styled.a`
+    font-size: 1.5rem;
+    display: flex;
+    color: black;
+
+    align-items: center;
+    justify-content: center;
+`
+
+const ContactScript = styled.h5`
+    font-size: .9rem;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+`
+
+const MyContacts = styled.a`
+  display: flex;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+
+  img {
+      width 80%;
+  }
+
+  `
+
+  const Contacts = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  a {
+    margin: 0.35rem;
+    }
+  }
+
+`
+
+const BlogWriting = styled.p`
+  display: flex;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  font-family: MS Courier New, monospace;
 `

@@ -2,6 +2,8 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import YoutubeEmbed from "./YoutubeEmbed"
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from "./Link2.png";
 
 function Portfolio(){
     const [desc, setDesc] = useState(false)
@@ -19,12 +21,21 @@ function Portfolio(){
     }
 
     return(
-        
+        <>
+        <Head>
+            <PageTitle>
+                Project Portfolio
+            </PageTitle>
+            <PortfolioWriting>
+                Video walk throughs of the projects I have developed!
+            </PortfolioWriting>
+
+        </Head>
         <Container>
             <Card className="flex-item">
                 <Title>InstAlert</Title>
                 <Languages>React Javascript Ruby Rails Active Record Bootsrap Custom CSS</Languages>
-            <YoutubeEmbed embedId="rokGy0huYEA" />
+            <YoutubeEmbed embedId="ai6FtS7nOKY" />
                 <Description>
                     <DropdownButton onClick={handleDescription}>
                         What's this All About?
@@ -35,7 +46,7 @@ function Portfolio(){
             <Card className="flex-item">
                 <Title>TipSee</Title>
                 <Languages>React Javascript Ruby Rails Active Record Bootsrap Custom CSS</Languages>
-            <YoutubeEmbed embedId="rokGy0huYEA" />
+            <YoutubeEmbed embedId="oMY4E4R7EXA" />
                 <Description>
                     <DropdownButton onClick={handleDescription1}>
                         What's this All About?
@@ -48,7 +59,7 @@ function Portfolio(){
                 <Title>NextFlix</Title>
                 <Languages>Javascript Ruby Rails Active Record Bootsrap Custom CSS</Languages>
 
-                <YoutubeEmbed embedId="rokGy0huYEA" />
+                <YoutubeEmbed embedId="Iegf08Mqg9Y" />
                 <Description>
                     <DropdownButton onClick={handleDescription2}>
                         What's this All About?
@@ -57,8 +68,25 @@ function Portfolio(){
                 {desc2 ? <ShowDesc>If you are looking for a new TV show or movie to enjoy, avoid hours of scrolling by using NextFlix - just input the last show or film you enjoyed, and NextFlix will tell you what else you might like! 
 </ShowDesc> : null}
             </Card>
+
         </Container>
-       
+        <Container2>
+        <Card>
+            <ContactScript>
+                Feel free to get in touch!
+            </ContactScript>
+            <Email href="mailto: alexhmarz@gmail.com">AlexHMarz@gmail.com</Email>
+            <Contacts>
+                    <MyContacts background="black" href="https://github.com/mahzmahzmahz" target="_blank">
+                        <GitHubIcon style={{color: "black", fontSize: "3rem"}}/>
+                    </MyContacts>
+                    <MyContacts background="white" href="https://www.linkedin.com/in/alex-marz/" target="_blank">
+                        <img src={LinkedInIcon} className= "rounded-circle" style={{background: "#007bff", fontSize: "3rem"}}/>
+                    </MyContacts>
+            </Contacts>
+        </Card>
+        </Container2>
+       </>
     )
 
     }
@@ -70,9 +98,20 @@ const Container = styled.section`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-top: 10%;
+    padding-top: 0%;
     min-height: 70vh;
 
+    .flex-item{
+        margin 1rem;
+    }
+`
+
+const Container2 = styled.section`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
     .flex-item{
         margin 1rem;
     }
@@ -105,6 +144,7 @@ const Description = styled.div`
 const DropdownButton = styled.button`
     width: 100%;
     display: flex;
+    position: sticky;
     align-items: center;
     justify-content: center;
     background: none;
@@ -114,6 +154,7 @@ const DropdownButton = styled.button`
     margin-top: 0.5rem;
     transition: all 0.2s;
     font-size: 1rem;
+    
         
     :hover {
         transform: scale(1.2);
@@ -141,4 +182,71 @@ const Languages = styled.h5`
     align-items: center;
     justify-content: center;
 
+`
+
+const Email = styled.a`
+    font-size: 1.5rem;
+    display: flex;
+    color: black;
+
+    align-items: center;
+    justify-content: center;
+`
+
+const ContactScript = styled.h5`
+    font-size: .9rem;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+`
+
+const MyContacts = styled.a`
+  display: flex;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+
+  img {
+      width 80%;
+  }`
+
+  const Contacts = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  a {
+    margin: 0.35rem;
+    }
+  }
+
+`
+
+const Head = styled.div`
+padding: 5%;
+padding-bottom: 0%;
+justify-content: center;
+`
+const PageTitle = styled.h3`
+font-size: 1em;
+text-align: center;
+color: #3cdae8;
+font-family: MS Courier New, monospace;
+text-shadow: 1px 1px 1px black,
+             3px 3px 1px black;
+`
+
+const PortfolioWriting = styled.p`
+  display: flex;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  font-family: MS Courier New, monospace;
 `
