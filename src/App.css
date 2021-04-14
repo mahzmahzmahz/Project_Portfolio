@@ -1,8 +1,8 @@
 .App {
   background-image: radial-gradient(
     circle at top left, 
-    #438c75, 
-    #021f15 50%
+    #2ca07b, 
+    #083526 50%
     );
     
   /* text-align: center; */
@@ -11,8 +11,8 @@
 .App-header {
   background-image: radial-gradient(
     circle at top left, 
-    #438c75, 
-    #021f15 50%
+    #2ca07b, 
+    #083526 50%
     );
   min-height: 100vh;
   /*flex-direction: column;

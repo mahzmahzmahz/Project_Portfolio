@@ -15,9 +15,7 @@ function Blogs(){
             <PageTitle>
                 Blog Posts
             </PageTitle>
-            <BlogWriting>
-                A few samples of my tech writing. Enjoy!
-            </BlogWriting>
+           
         </Head>
         <Container>
             <Card className="flex-item">
@@ -47,7 +45,7 @@ function Blogs(){
                 <ReadIt href="https://alexhmarz.medium.com/fake-r-it-til-you-make-it-14da1402a6ae" target="_blank">
                     <img style={{paddingLeft: "4px"}} src={MediumIcon} alt="Link to full article"/>
                 </ReadIt>
-                <Title>Fake(r) It 'Til You Make It</Title>
+                <Title style={{fontSize: "1.8rem"}}>Fake(r) It 'Til You Make It</Title>
                     <ImgContainer>
                         <ThisImage src="https://miro.medium.com/max/1400/1*JAd3FQci_AyQhPxEVFHk9A.png" alt="Faker Code">
                              
@@ -110,7 +108,7 @@ padding-bottom: 2%;
 justify-content: center;
 `
 const PageTitle = styled.h3`
-font-size: 1em;
+font-size: 1.5em;
 text-align: center;
 color: #3cdae8;
 font-family: MS Courier New, monospace;
@@ -143,7 +141,12 @@ const Container2 = styled.section`
 
 const Card = styled.article`
     position: relative;
-    background: grey;
+    //background: #F1C97A;
+    background-image: radial-gradient(
+        circle at top left,
+        #083526, 
+        #2ca07b 50%
+        );
     width: 100%;
     max-width: 500px;
     padding: 0.5rem;
@@ -162,7 +165,11 @@ const Card = styled.article`
 
 const ContactCard = styled.article`
     position: relative;
-    background: grey;
+    background-image: radial-gradient(
+        circle at top left,
+        #083526, 
+        #2ca07b 50%
+        );
     width: 100%;
     max-width: 500px;
     padding: 0.5rem;
@@ -178,6 +185,7 @@ const ContactCard = styled.article`
     `
 
 const Title = styled.h2`
+    font-family: MS Courier New, monospace;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -269,11 +277,3 @@ const MyContacts = styled.a`
 
 `
 
-const BlogWriting = styled.p`
-  display: flex;
-  font-size: 1rem;
-  color: white;
-  text-align: center;
-  justify-content: center;
-  font-family: MS Courier New, monospace;
-`

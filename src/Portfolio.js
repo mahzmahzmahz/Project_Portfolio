@@ -26,15 +26,12 @@ function Portfolio(){
             <PageTitle>
                 Project Portfolio
             </PageTitle>
-            <PortfolioWriting>
-                Video walk throughs of the projects I have developed!
-            </PortfolioWriting>
 
         </Head>
         <Container>
             <Card className="flex-item">
                 <Title>InstAlert</Title>
-                <Languages>React Javascript Ruby Rails Active Record Bootsrap Custom CSS</Languages>
+                <Languages>React-Javascript-Ruby-Rails-Active Record-Bootsrap-Custom CSS</Languages>
             <YoutubeEmbed embedId="ai6FtS7nOKY" />
                 <Description>
                     <DropdownButton onClick={handleDescription}>
@@ -45,7 +42,7 @@ function Portfolio(){
             </Card>
             <Card className="flex-item">
                 <Title>TipSee</Title>
-                <Languages>React Javascript Ruby Rails Active Record Bootsrap Custom CSS</Languages>
+                <Languages>React-Javascript-Ruby-Rails-Active Record-Bootsrap-Custom CSS</Languages>
             <YoutubeEmbed embedId="oMY4E4R7EXA" />
                 <Description>
                     <DropdownButton onClick={handleDescription1}>
@@ -57,7 +54,7 @@ function Portfolio(){
             </Card>
             <Card className="flex-item">
                 <Title>NextFlix</Title>
-                <Languages>Javascript Ruby Rails Active Record Bootsrap Custom CSS</Languages>
+                <Languages>Javascript-Ruby-Rails-Active Record-Bootsrap-Custom CSS</Languages>
 
                 <YoutubeEmbed embedId="Iegf08Mqg9Y" />
                 <Description>
@@ -119,7 +116,11 @@ const Container2 = styled.section`
 
 const Card = styled.article`
     position: relative;
-    background: grey;
+    background-image: radial-gradient(
+        circle at top left,
+        #083526, 
+        #2ca07b 50%
+        );
     width: 100%;
     max-width: 500px;
     padding: 0.5rem;
@@ -169,6 +170,7 @@ const ShowDesc = styled.h4`
 `
 
 const Title = styled.h2`
+    font-family: MS Courier New, monospace;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -234,7 +236,7 @@ padding-bottom: 0%;
 justify-content: center;
 `
 const PageTitle = styled.h3`
-font-size: 1em;
+font-size: 1.5em;
 text-align: center;
 color: #3cdae8;
 font-family: MS Courier New, monospace;
@@ -242,11 +244,3 @@ text-shadow: 1px 1px 1px black,
              3px 3px 1px black;
 `
 
-const PortfolioWriting = styled.p`
-  display: flex;
-  font-size: 1rem;
-  color: white;
-  text-align: center;
-  justify-content: center;
-  font-family: MS Courier New, monospace;
-`
