@@ -3,6 +3,7 @@ import Header from "./Header"
 import Portfolio from "./Portfolio"
 import About from "./About"
 import Blogs from "./Blogs"
+import Contacts from "./Contacts"
 import logo from './logo.svg';
 import './App.css';
 import {Switch, Route} from "react-router-dom";
@@ -26,6 +27,9 @@ function App() {
               </Route>
               <Route exact path = "/blogs">
                 <Blogs /> 
+              </Route>
+              <Route exact path = "/contact-info">
+                <Contacts/>
               </Route>
             </Switch>
           </div>

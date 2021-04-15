@@ -10,6 +10,7 @@ function NavBar(){
                 <div className="link-div">
                     <Link className="navLink" style={{ textDecoration: 'none'}} to="/portfolio"><strong>Portfolio</strong></Link>
                     <Link className="navLink" style={{ textDecoration: 'none'}} to="/blogs"><strong>Blogs</strong></Link>
+                    <Link className="navLink" style={{ textDecoration: 'none'}} to="/contact-info"><strong>Contact</strong></Link>
                 </div>
         </Navbar>
     )

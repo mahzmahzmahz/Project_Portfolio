@@ -30,7 +30,7 @@ function About(){
             </TextContainer>
             <Contacts className="flex-item">
                 <MyContacts background="black" href="https://github.com/mahzmahzmahz" target="_blank">
-                    <GitHubIcon style={{color: "red", fontSize: "3rem"}}/>
+                    <GitHubIcon style={{color: "black", fontSize: "3rem"}}/>
                 </MyContacts>
                 <MyContactsTwo background="white" href="https://www.linkedin.com/in/alex-marz/" target="_blank">
                     <img src={LinkedInIcon} className= "rounded-circle" style={{background: "#007bff", fontSize: "3rem"}}/>
