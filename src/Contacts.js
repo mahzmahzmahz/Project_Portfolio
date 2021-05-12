@@ -10,14 +10,12 @@ import alex from "./signature.png"
 
 
 function Contacts(){
+    
 
     return(
         <>
         <Container>
             
-        <PixelContainer>
-            <img className="character_spritesheet" src={pixel} alt="Pixel Alex"/>
-        </PixelContainer>
 
             <TextContainer>
                 <ThankYou>Thanks for stopping by!</ThankYou>
@@ -30,25 +28,32 @@ function Contacts(){
                     
             </TextContainer>
             
-
+            <PixelContainer>
+                <img className="character_spritesheet" src={pixel} alt="Pixel Alex"/>
+            </PixelContainer>
         </Container>
 
+        
+        
         <ContactDiv>
 
             <MyContacts background="black" href="https://github.com/mahzmahzmahz" target="_blank">
                 <GitHubIcon style={{color: "black", fontSize: "3rem"}}/>
             </MyContacts>
             <MyContacts background="white" href="https://www.linkedin.com/in/alex-marz/" target="_blank">
-                <img src={LinkedInIcon} className= "rounded-circle" style={{background: "#007bff", fontSize: "3rem"}}/>
+                <img src={LinkedInIcon} alt="LinkedIn Icon" className= "rounded-circle" style={{background: "#007bff", fontSize: "3rem"}}/>
             </MyContacts>
             <MyContacts background="black" href="https://alexhmarz.medium.com/" target="_blank">
-                    <img className= "rounded-circle" src={MediumIcon} style={{fontSize: "7rem"}}/>
+                    <img className= "rounded-circle" alt="Medium Icon" src={MediumIcon} style={{fontSize: "7rem"}}/>
             </MyContacts>
             <MyContacts background="black" href="https://www.imdb.com/name/nm9542537/?ref_=fn_al_nm_1" target="_blank">
-                    <img className= "rounded-circle" src={IMDBIcon} style={{fontSize: "3rem"}}/>
+                    <img className= "rounded-circle" src={IMDBIcon} alt="IMDB Icon" style={{fontSize: "3rem"}}/>
             </MyContacts>
 
         </ContactDiv>
+
+        
+
         </>
     )
 
@@ -60,13 +65,15 @@ const Container = styled.section`
     align-items: center;
     justify-content: center;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    margin-right: 0;
 
 `
 
 const PixelContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    position: sticky;
     justify-content: center;
     padding-top: 0px;
     height: 576px;
@@ -76,7 +83,8 @@ const PixelContainer = styled.div`
 `
 
 const ThankYou = styled.h3`
-    padding-top: 40%;
+    padding-top: 10%;
+    max-width: 100%;
     text-align: center;
     font-family: MS Courier New, monospace;
     color: #3cdae8;
@@ -85,7 +93,7 @@ const ThankYou = styled.h3`
 `
 
 const TextContainer = styled.div`
-    max-width: 500px;
+    max-width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,7 +133,7 @@ const ContactDiv = styled.div`
 `
 
 const Email = styled.a`
-    font-size: 1.5rem;
+    font-size: 1rem;
     display: flex;
     color: black;
     font-family: MS Courier New, monospace;

@@ -1,5 +1,5 @@
 
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import MediumIcon from "./Medium.jpg"
 import Twilio from "./Twilio.png"
@@ -87,10 +87,10 @@ function Blogs(){
             <Email href="mailto: alexhmarz@gmail.com">AlexHMarz@gmail.com</Email>
             <Contacts>
                     <MyContacts background="black" href="https://alexhmarz.medium.com/" target="_blank">
-                        <img className= "rounded-circle" src={MediumIcon} style={{fontSize: "7rem"}}/>
+                        <img className= "rounded-circle" src={MediumIcon} alt="Medium Icon" style={{fontSize: "7rem"}}/>
                     </MyContacts>
                     <MyContacts background="white" href="https://www.linkedin.com/in/alex-marz/" target="_blank">
-                        <img src={LinkedInIcon} className= "rounded-circle" style={{background: "#007bff", fontSize: "3rem"}}/>
+                        <img src={LinkedInIcon} className= "rounded-circle" alt="LinkedIn Icon" style={{background: "#007bff", fontSize: "3rem"}}/>
                     </MyContacts>
             </Contacts>
         </ContactCard>
@@ -276,4 +276,5 @@ const MyContacts = styled.a`
   }
 
 `
+
 

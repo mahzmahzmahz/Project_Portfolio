@@ -4,18 +4,19 @@ import Portfolio from "./Portfolio"
 import About from "./About"
 import Blogs from "./Blogs"
 import Contacts from "./Contacts"
-import logo from './logo.svg';
 import './App.css';
 import {Switch, Route} from "react-router-dom";
 
 function App() {
 
   console.log("Hi there!")
+  console.log(" Welcome to my portfolio! ")
+  console.log("Feel free to reach out to me at AlexHMarz@gmail.com")
 
 
   return (
     <div className="App">
-          <NavBar />
+      <NavBar/>
           <div className="App-header">
             <Route exact path = "/">
               <Header/>

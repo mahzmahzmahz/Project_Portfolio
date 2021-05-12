@@ -9,6 +9,10 @@ import IMDBIcon from "./IMDB2.png"
 
 
 function About(){
+    
+
+    
+
     return(
         <Container>
             
@@ -27,19 +31,21 @@ function About(){
                 <Bio className="flex-item">
                 I have worked as an Actor, Talent Manager, Assistant and Server/Bartender in the performing arts and hospitality industries in NYC. I hold a BA in American Studies from Connecticut College and a Master of Fine Arts (MFA) focused in Acting from Columbia University in the City of New York. 
                 </Bio>
+                
             </TextContainer>
+          
             <Contacts className="flex-item">
                 <MyContacts background="black" href="https://github.com/mahzmahzmahz" target="_blank">
                     <GitHubIcon style={{color: "black", fontSize: "3rem"}}/>
                 </MyContacts>
                 <MyContactsTwo background="white" href="https://www.linkedin.com/in/alex-marz/" target="_blank">
-                    <img src={LinkedInIcon} className= "rounded-circle" style={{background: "#007bff", fontSize: "3rem"}}/>
+                    <img src={LinkedInIcon} alt="LinkedIn Icon" className= "rounded-circle" style={{background: "#007bff", fontSize: "3rem"}}/>
                 </MyContactsTwo>
                 <MyContacts background="black" href="https://alexhmarz.medium.com/" target="_blank">
-                    <img className= "rounded-circle" src={MediumIcon} style={{fontSize: "7rem"}}/>
+                    <img className= "rounded-circle" alt="Medium Icon" src={MediumIcon} style={{fontSize: "7rem"}}/>
                 </MyContacts>
                 <MyContactsTwo background="black" href="https://www.imdb.com/name/nm9542537/?ref_=fn_al_nm_1" target="_blank">
-                    <img className= "rounded-circle" src={IMDBIcon} style={{fontSize: "3rem"}}/>
+                    <img className= "rounded-circle" src={IMDBIcon} alt="IMDB Icon" style={{fontSize: "3rem"}}/>
                 </MyContactsTwo>
 
             </Contacts>
@@ -199,3 +205,4 @@ const RepoLink = styled.a`
   align-items: center;
   justify-content: center;
 `
+

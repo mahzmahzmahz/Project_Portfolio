@@ -78,7 +78,7 @@ function Portfolio(){
                         <GitHubIcon style={{color: "black", fontSize: "3rem"}}/>
                     </MyContacts>
                     <MyContacts background="white" href="https://www.linkedin.com/in/alex-marz/" target="_blank">
-                        <img src={LinkedInIcon} className= "rounded-circle" style={{background: "#007bff", fontSize: "3rem"}}/>
+                        <img src={LinkedInIcon} alt="LinkedIn Icon" className= "rounded-circle" style={{background: "#007bff", fontSize: "3rem"}}/>
                     </MyContacts>
             </Contacts>
         </Card>

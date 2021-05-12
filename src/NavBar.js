@@ -1,21 +1,44 @@
 import React from "react"
-import {NavLink, Link} from "react-router-dom"
-import Navbar from 'react-bootstrap/Navbar'
-import AlexLogo from "./AlexLogo.png"
+import styled from "styled-components"
+import {Link} from "react-router-dom"
 
 function NavBar(){
+   
+
     return(
-        <Navbar sticky="top" id="NavBar" >
-            <Navbar.Brand style={{display: "inline"}}> <Link to="/" ><img className="NavBar-Alex" alt="Alex Marz's Page" src={AlexLogo}/></Link></Navbar.Brand>
-                <div className="link-div">
-                    <Link className="navLink" style={{ textDecoration: 'none'}} to="/portfolio"><strong>Portfolio</strong></Link>
-                    <Link className="navLink" style={{ textDecoration: 'none'}} to="/blogs"><strong>Blogs</strong></Link>
-                    <Link className="navLink" style={{ textDecoration: 'none'}} to="/contact-info"><strong>Contact</strong></Link>
-                </div>
-        </Navbar>
+        <Container>
+            <LinkTables>
+                <Link className="navLink" style={{ textDecoration: 'none'}} to="/"><strong>HOME</strong></Link>
+                <Link className="navLink" style={{ textDecoration: 'none'}} to="/portfolio"><strong>PORTFOLIO</strong></Link>
+                <Link className="navLink" style={{ textDecoration: 'none'}} to="/blogs"><strong>BLOGS</strong></Link>
+                <Link className="navLink" style={{ textDecoration: 'none'}} to="/contact-info"><strong>CONTACT</strong></Link>
+            </LinkTables>
+        </Container>
     )
 
 }
 
 export default NavBar;
 
+const LinkTables = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    margin: 0.35rem;
+    }
+  }
+
+`
+const Container = styled.section`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   
+    
+
+    .flex-item{
+        margin 1rem;
+    }
+`
